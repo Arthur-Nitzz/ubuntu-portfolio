@@ -1,4 +1,4 @@
-import { Ubuntu } from '@/components';
+import { Ubuntu } from '@/components/ubuntu';
 
 const HomePage = () => {
   return (
