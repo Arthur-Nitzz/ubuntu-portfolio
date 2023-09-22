@@ -1,4 +1,4 @@
-import React, { SVGProps, forwardRef } from 'react';
+import { SVGProps } from 'react';
 
 interface AudioVolumeProps extends SVGProps<SVGSVGElement> {}
 

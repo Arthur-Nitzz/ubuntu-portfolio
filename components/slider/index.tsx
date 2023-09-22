@@ -1,4 +1,4 @@
-import React, { forwardRef, Ref, HTMLProps } from 'react';
+import { HTMLProps } from 'react';
 
 interface SliderProps extends HTMLProps<HTMLInputElement> {}
 
