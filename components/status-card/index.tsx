@@ -1,6 +1,7 @@
 import { FormEvent } from 'react';
 
-import { AudioVolume, Brightness } from '@/components/icons';
+import { Accordion } from '@/components/accordion';
+import { AudioVolume, Brightness, Wifi } from '@/components/icons';
 import { Slider } from '@/components/slider';
 import {
   setBrightnessLevel,
@@ -37,6 +38,16 @@ const StatusCard = ({}: StatusCardProps) => {
           }
           value={status.brightnessLevel}
         />
+      </div>
+      <hr className="my-2 h-px border-0 bg-gray-700" />
+      <div className="flex flex-col">
+        <Accordion title="Sakil's Wifi" icon={<Wifi />}>
+          <div className="">
+            <p className="p-1 px-5 hover:bg-slate-700">Select Network</p>
+            <p className="p-1 px-5 hover:bg-slate-700">Power Off</p>
+            <p className="p-1 px-5 hover:bg-slate-700">Wi-Fi Settings</p>
+          </div>
+        </Accordion>
       </div>
     </div>
   );
