@@ -1,6 +1,5 @@
-import React from 'react';
-
 import { BackgroundImage } from '@/components/background-image';
+import { Sidebar } from '@/components/sidebar';
 import { useAppSelector } from '@/redux/hooks';
 
 interface DesktopProps {}
@@ -10,6 +9,7 @@ const Desktop = ({}: DesktopProps) => {
   return (
     <div>
       <BackgroundImage backgroundImage={backgroundImage} />
+      <Sidebar />
     </div>
   );
 };
