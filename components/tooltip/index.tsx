@@ -1,3 +1,5 @@
+'use client';
+
 import cls from 'classnames';
 import { FC, ReactNode, useState } from 'react';
 
