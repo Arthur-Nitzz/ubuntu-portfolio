@@ -16,6 +16,7 @@ const Sidebar = ({}: SidebarProps) => {
             title={item.title}
             imageSrc={item.imageSrc}
             id={item.id}
+            isOpen={item.isOpen}
           />
         </Tooltip>
       ))}
