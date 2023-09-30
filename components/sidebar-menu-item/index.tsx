@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { openApp } from '@/redux/features/favorite-apps-slice';
+import { openApp } from '@/redux/features/all-apps-slice';
 import { useAppDispatch } from '@/redux/hooks';
 
 interface SidebarMenuItemProps {

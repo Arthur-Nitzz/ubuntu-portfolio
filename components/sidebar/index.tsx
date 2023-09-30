@@ -6,7 +6,7 @@ import { useAppSelector } from '@/redux/hooks';
 interface SidebarProps {}
 
 const Sidebar = ({}: SidebarProps) => {
-  const favoriteApps = useAppSelector((state) => state.favoriteApps);
+  const favoriteApps = useAppSelector((state) => state.allApps);
 
   return (
     <div className="absolute left-0 top-0 z-40 flex h-full w-auto transform select-none flex-col items-center justify-start border-black border-opacity-60 bg-black bg-opacity-50 pt-7 duration-300">

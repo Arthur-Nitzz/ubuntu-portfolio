@@ -1,20 +1,25 @@
+import { ReactNode } from 'react';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface FavoriteAppsState {
+import { Chrome } from '@/components/apps';
+
+interface AllAppsState {
   id: string;
   title: string;
   imageSrc: string;
   isFavorite: boolean;
   isOpen: boolean;
+  app: ReactNode;
 }
 
-const initialState: FavoriteAppsState[] = [
+const initialState: AllAppsState[] = [
   {
     id: Math.random().toString(),
     title: 'Chrome',
     imageSrc: '/apps/chrome.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -22,6 +27,7 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/calc.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -29,6 +35,7 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/user-home.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -36,6 +43,7 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/vscode.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -43,6 +51,7 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/bash.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -50,6 +59,7 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/spotify.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
   {
     id: Math.random().toString(),
@@ -57,10 +67,11 @@ const initialState: FavoriteAppsState[] = [
     imageSrc: '/apps/gnome-control-center.png',
     isFavorite: true,
     isOpen: false,
+    app: Chrome(),
   },
 ];
-export const favoriteApps = createSlice({
-  name: 'favoriteApps',
+export const appApps = createSlice({
+  name: 'allApps',
   initialState,
   reducers: {
     openApp: (state, action: PayloadAction<string>) => {
@@ -78,5 +89,5 @@ export const favoriteApps = createSlice({
   },
 });
 
-export const { closeApp, openApp } = favoriteApps.actions;
-export default favoriteApps.reducer;
+export const { closeApp, openApp } = appApps.actions;
+export default appApps.reducer;
