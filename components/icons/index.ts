@@ -6,3 +6,4 @@ export { Bluetooth } from './bluetooth';
 export { Settings } from './settings';
 export { Lock } from './lock';
 export { PowerOff } from './power-off';
+export { Grid } from './grid';
