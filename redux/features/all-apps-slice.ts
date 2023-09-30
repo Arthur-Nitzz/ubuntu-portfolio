@@ -9,7 +9,7 @@ interface AllAppsState {
   imageSrc: string;
   isFavorite: boolean;
   isOpen: boolean;
-  app: ReactNode;
+  app: any;
 }
 
 const initialState: AllAppsState[] = [
@@ -19,7 +19,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/chrome.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -27,7 +27,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/calc.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -35,7 +35,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/user-home.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -43,7 +43,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/vscode.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -51,7 +51,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/bash.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -59,7 +59,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/spotify.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
   {
     id: Math.random().toString(),
@@ -67,7 +67,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/gnome-control-center.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome(),
+    app: Chrome,
   },
 ];
 export const appApps = createSlice({

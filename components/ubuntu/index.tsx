@@ -16,7 +16,7 @@ const Ubuntu = ({}: UbuntuProps) => {
         .filter((item) => item.isOpen)
         .map((item) => (
           <Window key={item.id} title={item.title} id={item.id}>
-            {item.app}
+            {<item.app />}
           </Window>
         ))}
     </div>
