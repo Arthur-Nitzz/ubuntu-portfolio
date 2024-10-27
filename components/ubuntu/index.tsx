@@ -13,9 +13,9 @@ const Ubuntu = ({}: UbuntuProps) => {
       <Navbar />
       <Desktop />
       {allApps
-        .filter((item) => item.isOpen)
+        .filter((item) => item.isOpen && item.isMinimized === false)
         .map((item) => (
-          <Window key={item.id} title={item.title} id={item.id}>
+          <Window title={item.title} id={item.id} key={item.id}>
             {<item.app />}
           </Window>
         ))}
