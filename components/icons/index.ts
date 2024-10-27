@@ -7,3 +7,7 @@ export { Settings } from './settings';
 export { Lock } from './lock';
 export { PowerOff } from './power-off';
 export { Grid } from './grid';
+export { Close } from './close';
+export { Maximize } from './maximize';
+export { Refresh } from './refresh';
+export { Home } from './home';
