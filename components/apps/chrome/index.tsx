@@ -5,14 +5,15 @@ import { useState } from 'react';
 import { Home, Refresh } from '@/components/icons';
 
 const Chrome = () => {
-  const [siteUrl, setSiteUrl] = useState<string>('https://www.google.com/');
+  const url='https://www.google.com/webhp?igu=1';
+  const [siteUrl, setSiteUrl] = useState<string>(url);
 
   const onRefresh = () => {
-    setSiteUrl(siteUrl);
+    setSiteUrl(url);
   };
 
   const onHome = () => {
-    setSiteUrl('https://www.google.com');
+    setSiteUrl(url);
   };
 
   return (
