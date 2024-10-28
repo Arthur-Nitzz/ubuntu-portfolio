@@ -50,12 +50,12 @@ const Window = ({ id, title, children }: WindowProps) => {
   return (
     <Draggable
       handle=".handle"
-      defaultPosition={app?.position || { x: 0, y: 0 }}
       scale={1}
       onStart={handleStart}
       onDrag={handleDrag}
       onStop={handleStop}
       bounds="parent"
+      position={app?.maximized ? { x: 0, y: 0 } : app?.position}
     >
       <div
         className={cls(
@@ -64,7 +64,6 @@ const Window = ({ id, title, children }: WindowProps) => {
           app?.maximized ? 'h-full w-full' : '',
         )}
         style={{
-          transform: `translate(${deltaPosition.x}px, ${deltaPosition.y}px)`,
           position: 'absolute',
           top: app?.maximized ? '32px' : '',
           left: app?.maximized ? '58px' : '',

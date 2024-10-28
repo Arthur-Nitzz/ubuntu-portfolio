@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Home, Refresh } from '@/components/icons';
 
 const Chrome = () => {
-  const url='https://www.google.com/webhp?igu=1';
+  const url = 'https://www.google.com/webhp?igu=1';
   const [siteUrl, setSiteUrl] = useState<string>(url);
 
   const onRefresh = () => {

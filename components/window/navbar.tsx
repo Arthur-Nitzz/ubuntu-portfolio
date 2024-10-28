@@ -6,6 +6,7 @@ import { Close, Maximize } from '@/components/icons';
 import { useAppDispatch } from '@/redux/hooks';
 import { Minimize } from '../icons/minimize';
 import {
+  changePosition,
   closeApp,
   maximizeApp,
   minimizeApp,
