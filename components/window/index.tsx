@@ -6,15 +6,16 @@ import cls from 'classnames';
 
 import { Navbar } from './navbar';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import { changePosition } from '@/redux/features/all-apps-slice';
+import { changePosition, zIndexApp } from '@/redux/features/all-apps-slice';
 
 interface WindowProps {
   id: string;
   title: string;
   children: ReactNode;
+  zIndex: number;
 }
 
-const Window = ({ id, title, children }: WindowProps) => {
+const Window = ({ id, title, children, zIndex }: WindowProps) => {
   const dispatch = useAppDispatch();
   const apps = useAppSelector((state) => state.allApps);
   const app = apps.find((item) => item.id === id);
@@ -59,7 +60,7 @@ const Window = ({ id, title, children }: WindowProps) => {
     >
       <div
         className={cls(
-          'absolute left-20 top-10 flex h-5/6 w-7/12 flex-col rounded-lg bg-zinc-800',
+          'absolute left-20 top-10 flex h-3/4 w-3/4 flex-col rounded-lg bg-zinc-800 shadow-lg',
           isDragging ? '' : 'transition-transform duration-300 ease-out',
           app?.maximized ? 'h-full w-full' : '',
         )}
@@ -72,6 +73,10 @@ const Window = ({ id, title, children }: WindowProps) => {
           overflow: app?.maximized ? 'hidden' : '',
           width: app?.maximized ? 'calc(100vw - 58px)' : '',
           height: app?.maximized ? 'calc(100vh - 32px)' : '',
+          zIndex: app?.zIndex,
+        }}
+        onClick={(e) => {
+          dispatch(zIndexApp(id));
         }}
       >
         <Navbar

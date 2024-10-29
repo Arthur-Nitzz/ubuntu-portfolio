@@ -1,6 +1,10 @@
 import React from 'react';
 
-const VSCode = () => {
+interface VSCodeProps {
+  id: string;
+}
+
+const VSCode = ({ id }: VSCodeProps) => {
   return (
     <div className="flex h-full flex-col">
       <div className="flex-grow">

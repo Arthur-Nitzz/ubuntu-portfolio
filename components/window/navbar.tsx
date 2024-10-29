@@ -10,8 +10,8 @@ import {
   closeApp,
   maximizeApp,
   minimizeApp,
-  reset,
 } from '@/redux/features/all-apps-slice';
+import { useRef } from 'react';
 
 interface NavbarProps {
   id: string;
@@ -20,6 +20,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ title, id, className }: NavbarProps) => {
+  const dragRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
 
   const onMinimize = () => {
@@ -32,11 +33,10 @@ const Navbar = ({ title, id, className }: NavbarProps) => {
 
   const onClose = () => {
     dispatch(closeApp(id));
-    dispatch(reset(id));
   };
 
   return (
-    <div className={cls(className, className ? 'cursor-move' : '')}>
+    <div className={cls(className)} ref={dragRef}>
       <div className="flex items-center justify-between px-3 py-2">
         <div></div>
         <p className="font-bold text-white">{title}</p>
@@ -44,18 +44,21 @@ const Navbar = ({ title, id, className }: NavbarProps) => {
           <div
             className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
             onClick={onMinimize}
+            onTouchStart={onMinimize}
           >
             <Minimize />
           </div>
           <div
             className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
             onClick={onMaximize}
+            onTouchStart={onMaximize}
           >
             <Maximize />
           </div>
           <div
             className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
             onClick={onClose}
+            onTouchStart={onClose}
           >
             <Close />
           </div>
