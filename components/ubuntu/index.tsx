@@ -15,8 +15,13 @@ const Ubuntu = ({}: UbuntuProps) => {
       {allApps
         .filter((item) => item.isOpen && item.isMinimized === false)
         .map((item) => (
-          <Window title={item.title} id={item.id} key={item.id}>
-            {<item.app />}
+          <Window
+            title={item.title}
+            id={item.id}
+            key={item.id}
+            zIndex={item.zIndex}
+          >
+            {<item.app id={item.id} />}
           </Window>
         ))}
     </div>
