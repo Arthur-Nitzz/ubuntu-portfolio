@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import _, { max, min } from 'lodash';
 
-import { Chrome, VSCode, Terminal, Spotify } from '@/components/apps';
+import { Chrome, VSCode, Terminal, Spotify, AboutMe } from '@/components/apps';
 
 interface AllAppsState {
   id: string;
@@ -60,7 +60,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/user-home.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome,
+    app: AboutMe,
     isMinimized: false,
     position: {
       x: 0,
