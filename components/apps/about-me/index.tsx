@@ -6,6 +6,7 @@ import cls from 'classnames';
 import { Sidebar } from './sidebar';
 import { ActiveTab } from '@/interfaces/about-me';
 import { About } from './about';
+import { Education } from './education';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('about');
@@ -41,6 +42,7 @@ const AboutMe = () => {
       </div>
       <div className=" flex w-3/4 flex-grow flex-col items-center justify-start overflow-y-auto bg-gray-950 md:w-4/5">
         {activeTab === 'about' && <About />}
+        {activeTab === 'education' && <Education />}
       </div>
     </div>
   );

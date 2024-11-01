@@ -11,6 +11,7 @@ const Home = () => {
       style={{
         filter: `brightness(${status.brightnessLevel / 100})`,
       }}
+      className="font-ubuntu"
     >
       <div>
         <Ubuntu />

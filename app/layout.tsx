@@ -1,10 +1,21 @@
 import type { Metadata } from 'next';
-import { Ubuntu } from 'next/font/google';
+import { Ubuntu, Caveat } from 'next/font/google';
+import cls from 'classnames';
 import './globals.css';
 
 import { Providers } from '@/redux/provider';
 
-const ubuntu = Ubuntu({ weight: '400', subsets: ['latin'] });
+const ubuntu = Ubuntu({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-ubuntu',
+});
+
+const caveat = Caveat({
+  weight: '500',
+  subsets: ['latin'],
+  variable: '--font-caveat',
+});
 
 export const metadata: Metadata = {
   title: 'Ubuntu 22.04',
@@ -18,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>
+      <body className={cls(ubuntu.variable, caveat.variable)}>
         <Providers>{children}</Providers>
       </body>
     </html>
