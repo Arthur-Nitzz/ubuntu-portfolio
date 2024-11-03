@@ -8,6 +8,7 @@ import { Sidebar } from './sidebar';
 import { About } from './about';
 import { Education } from './education';
 import { Experience } from './experience';
+import { Resume } from './resume';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('about');
@@ -45,6 +46,7 @@ const AboutMe = () => {
         {activeTab === 'about' && <About />}
         {activeTab === 'experience' && <Experience />}
         {activeTab === 'education' && <Education />}
+        {activeTab === 'resume' && <Resume />}
       </div>
     </div>
   );
