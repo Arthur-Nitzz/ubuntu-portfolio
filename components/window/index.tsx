@@ -63,9 +63,9 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
           'absolute left-20 top-10 flex h-3/4 w-3/4 flex-col rounded-lg bg-zinc-800 shadow-lg',
           isDragging ? '' : 'transition-transform duration-300 ease-out',
           app?.maximized ? 'h-full w-full' : '',
+          'overflow-hidden',
         )}
         style={{
-          position: 'absolute',
           top: app?.maximized ? '32px' : '',
           left: app?.maximized ? '58px' : '',
           right: app?.maximized ? '0px' : '',
@@ -84,7 +84,7 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
           id={id}
           className={app?.maximized ? '' : 'handle'}
         />
-        <div className="flex-grow">{children}</div>
+        <div className="flex-grow overflow-auto">{children}</div>
       </div>
     </Draggable>
   );

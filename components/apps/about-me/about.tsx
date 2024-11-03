@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import React from 'react';
 
 const About = () => {
+  const yearsOfExperience = new Date().getFullYear() - 2021;
   return (
     <>
       <div className="my-4 w-20  md:w-28">
@@ -31,7 +31,7 @@ const About = () => {
           <span className="font-medium">Node.js/React.js ecosystem</span> with
           <span className="text-orange-600">
             {' '}
-            3+ years of professional experience
+            {yearsOfExperience}+ years of professional experience
           </span>
           . I am committed to continuously enhancing my skills to effectively
           solve{' '}
