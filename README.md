@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ubuntu Portfolio
 
-## Getting Started
+![Ubuntu Portfolio Screenshot](./public/screenshot.png)
 
-First, run the development server:
+A modern portfolio app inspired by the Ubuntu desktop environment. This app showcases your work, skills, and experience with an intuitive and visually appealing design.
+
+### Live Demo:
+
+[Check out the live version here!](https://ubuntu-portfolio-two.vercel.app/)
+
+## ✨ Features
+
+- **Ubuntu-inspired UI**: Mimics the look and feel of the Ubuntu operating system.
+- **Dark mode theme**: Sleek and modern design.
+- **Responsive**: Optimized for all screen sizes.
+- **Interactive Navigation**: Sidebar with multiple sections for an immersive experience.
+- **Customizable**: Easily update content to reflect your personal details.
+
+## 🚀 Built With
+
+- **[Next.js](https://nextjs.org/)** – React framework for server-side rendering and static site generation.
+- **[TypeScript](https://www.typescriptlang.org/)** – Typed JavaScript for enhanced development.
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework for styling.
+- **[Vercel](https://vercel.com/)** – For deployment and hosting.
+
+## 📸 Preview
+
+![Portfolio Preview](./public/screenshot.png)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v18.x or higher)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sakilk130/ubuntu-portfolio.git
+   cd ubuntu-portfolio
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to:
+
+   ```
+   http://localhost:3000
+   ```
+
+### Building for Production
+
+To generate a production build:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will create an optimized build in the `.next` folder. You can then run the following command to start the production server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🎨 Customization
 
-## Learn More
+To personalize this portfolio:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Update content**: Edit the `data` folder to modify the About Me, Experience, Projects, and other sections.
+2. **Change styling**: Modify the Tailwind CSS configuration or components to adjust the theme or layout.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions are welcome! If you have any improvements or bug fixes, please:
 
-## Deploy on Vercel
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
+
+## 📧 Contact
+
+Feel free to reach out to me if you have any questions or suggestions:
+
+- **Portfolio**: [https://sakilk130.vercel.app/](https://sakilk130.vercel.app/)
+- **Email**: [sakilk130@gmail.com](mailto:sakilk130@gmail.com)
+- **GitHub**: [@sakilk130](https://github.com/sakilk130)
