@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import cls from 'classnames';
 
-import { Sidebar } from './sidebar';
 import { ActiveTab } from '@/interfaces/about-me';
+import { Sidebar } from './sidebar';
 import { About } from './about';
 import { Education } from './education';
+import { Experience } from './experience';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('about');
@@ -40,8 +41,9 @@ const AboutMe = () => {
           <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
       </div>
-      <div className=" flex w-3/4 flex-grow flex-col items-center justify-start overflow-y-auto bg-gray-950 md:w-4/5">
+      <div className=" flex w-2/4 flex-grow flex-col items-center justify-start overflow-y-auto bg-gray-950 md:w-3/5">
         {activeTab === 'about' && <About />}
+        {activeTab === 'experience' && <Experience />}
         {activeTab === 'education' && <Education />}
       </div>
     </div>
