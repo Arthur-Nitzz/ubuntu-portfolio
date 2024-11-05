@@ -9,6 +9,7 @@ import { About } from './about';
 import { Education } from './education';
 import { Experience } from './experience';
 import { Resume } from './resume';
+import { Projects } from './projects';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('about');
@@ -42,11 +43,12 @@ const AboutMe = () => {
           <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         </div>
       </div>
-      <div className=" flex w-2/4 flex-grow flex-col items-center justify-start overflow-y-auto bg-gray-950 md:w-3/5">
+      <div className=" flex w-2/4 flex-grow flex-col  justify-start overflow-y-auto bg-gray-950 md:w-3/5">
         {activeTab === 'about' && <About />}
         {activeTab === 'experience' && <Experience />}
         {activeTab === 'education' && <Education />}
         {activeTab === 'resume' && <Resume />}
+        {activeTab === 'projects' && <Projects />}
       </div>
     </div>
   );
