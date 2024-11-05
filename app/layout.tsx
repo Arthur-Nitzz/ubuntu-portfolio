@@ -18,8 +18,9 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: 'Ubuntu 22.04',
-  description: 'Ubuntu 22.04',
+  title: 'Sakil Khan | Ubuntu 22.04',
+  description:
+    'Explore Sakil Khan’s portfolio showcasing projects and expertise in full-stack development, working with Ubuntu 22.04, React, Next.js, Node.js, and more. Dive into professional experience, innovative solutions, and tech insights on a modern development environment.',
 };
 
 export default function RootLayout({
