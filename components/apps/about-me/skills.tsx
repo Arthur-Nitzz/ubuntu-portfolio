@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import cls from 'classnames';
 
 import { frontend, backend, databaseCloud } from '@/data/skills';
 
@@ -13,7 +13,10 @@ const Section = ({ title, gradientFrom, gradientTo, items }: SectionProps) => {
   return (
     <div>
       <div
-        className={`mb-2 bg-gradient-to-r from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text text-xl font-extrabold text-transparent md:text-center`}
+        className={cls(
+          'mb-2 text-xl font-extrabold text-transparent md:text-center',
+          `bg-gradient-to-r from-[${gradientFrom}] to-[${gradientTo}] bg-clip-text`,
+        )}
       >
         {title}
       </div>
