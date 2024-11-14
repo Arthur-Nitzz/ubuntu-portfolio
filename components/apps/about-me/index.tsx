@@ -10,6 +10,7 @@ import { Education } from './education';
 import { Experience } from './experience';
 import { Resume } from './resume';
 import { Projects } from './projects';
+import { Skills } from './skills';
 
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('about');
@@ -49,6 +50,7 @@ const AboutMe = () => {
         {activeTab === 'education' && <Education />}
         {activeTab === 'resume' && <Resume />}
         {activeTab === 'projects' && <Projects />}
+        {activeTab === 'skills' && <Skills />}
       </div>
     </div>
   );
