@@ -60,10 +60,13 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
     >
       <div
         className={cls(
-          'absolute left-20 top-10 flex h-3/4 w-3/4 flex-col rounded-lg bg-zinc-800 shadow-lg',
+          'absolute left-20 top-10 flex  flex-col rounded-lg bg-zinc-800 shadow-lg',
           isDragging ? '' : 'transition-transform duration-300 ease-out',
           app?.maximized ? 'h-full w-full' : '',
           'overflow-hidden',
+          app?.slug === 'calculator'
+            ? 'h-3/4  w-3/4 md:h-2/4  md:w-1/4 '
+            : 'h-3/4  w-3/4',
         )}
         style={{
           top: app?.maximized ? '32px' : '',

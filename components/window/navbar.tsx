@@ -48,13 +48,15 @@ const Navbar = ({ title, id, className }: NavbarProps) => {
           >
             <Minimize />
           </div>
-          <div
-            className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
-            onClick={onMaximize}
-            onTouchStart={onMaximize}
-          >
-            <Maximize />
-          </div>
+          {title !== 'Calculator' && (
+            <div
+              className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
+              onClick={onMaximize}
+              onTouchStart={onMaximize}
+            >
+              <Maximize />
+            </div>
+          )}
           <div
             className="mx-1.5 mt-1 flex h-5 w-5 cursor-default items-center justify-center rounded-full bg-zinc-700 bg-opacity-90 shadow-lg hover:bg-opacity-100 focus:outline-none"
             onClick={onClose}
