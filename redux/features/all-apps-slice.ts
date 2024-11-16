@@ -1,7 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import _, { max, min } from 'lodash';
+import _, { max } from 'lodash';
 
-import { Chrome, VSCode, Terminal, Spotify, AboutMe } from '@/components/apps';
+import {
+  Chrome,
+  VSCode,
+  Terminal,
+  Spotify,
+  AboutMe,
+  Calculator,
+} from '@/components/apps';
 
 interface AllAppsState {
   id: string;
@@ -44,7 +51,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/calc.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome,
+    app: Calculator,
     isMinimized: false,
     position: {
       x: 0,
