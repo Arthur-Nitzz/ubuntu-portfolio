@@ -4,7 +4,7 @@ export const experience = [
   {
     id: _.uniqueId(),
     timeline: 'Jul 2023 - Present',
-    company: 'SSL Wireless',
+    company: 'Auth Wireless',
     url: 'https://www.sslwireless.com/',
     position: 'Software Specialist',
     location: 'Dhaka, Bangladesh',
